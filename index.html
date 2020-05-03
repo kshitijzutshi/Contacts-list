@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css" integrity="sha256-13EKEXRsynh3cmmNF1dlW6uvoC1SZVaW94bIHZQJoMU=" crossorigin="anonymous" />
+  <title>My Contacts</title>
+
+  <style>
+    /* body {font-family: Arial, Helvetica, sans-serif;} */
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 130px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* The Close Button */
+    .close1 {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close1:hover,
+    .close1:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* The Close Button */
+    .close2 {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close2:hover,
+    .close2:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* The Close Button */
+    .close3 {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close3:hover,
+    .close3:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+
+    .btn {
+      border-radius: 5px;
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="center-align">
+      My Contacts
+    </h1>
+    <input type="text" id="filterInput" placeholder="Search names.." />
+    <ul id="names" class="collection with-header">
+      <li class="collection-header">
+        <h5>A</h5>
+      </li>
+      <li class="collection-item">
+        <a href="#">Abe</a>
+        <!-- Trigger/Open The Modal -->
+        <div align="right">
+
+          <button class="btn" id="myBtn">Info</button>
+        </div>
+
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <h5 class="center-align">
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Abe
+            </h5>
+            <h5 class="center-align">
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 80 North Ivy Ave.
+              South Gate, CA 90280
+            </h5>
+            <h5 class="center-align">
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 562-943-6282
+              Landline, from La Habra, CA(state),USA
+            </h5>
+
+
+          </div>
+
+        </div>
+      </li>
+      <li class="collection-item">
+        <a href="#">Alan</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">Adolf</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">Aston</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">Aznecticov</a>
+      </li>
+
+      <li class="collection-header">
+        <h5>B</h5>
+      </li>
+      <li class="collection-item">
+        <a href="#">Bane</a>
+
+        <!-- Trigger/Open The Modal -->
+        <div align="right">
+
+          <button class="btn" id="myBtn1">Info</button>
+        </div>
+
+
+        <!-- The Modal -->
+        <div id="myModal1" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close1">&times;</span>
+
+            <h5 class="center-align">
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Bane
+            </h5>
+            <h5 class="center-align">
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 924 Sheffield Street
+              San Diego, CA 92117
+            </h5>
+            <h5 class="center-align">
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 310-449-7132
+              Landline, from Santa Monica, CA(state),USA
+            </h5>
+
+
+          </div>
+
+        </div>
+
+
+      </li>
+      <li class="collection-item">
+        <a href="#">Bob</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">Bandersnatch</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">Binoy</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">Bobby</a>
+      </li>
+
+      <li class="collection-header">
+        <h5>J</h5>
+      </li>
+      <li class="collection-item">
+        <a href="#">Jack</a>
+
+        <!-- Trigger/Open The Modal -->
+        <div align="right">
+
+          <button class="btn" id="myBtn2">Info</button>
+        </div>
+
+
+        <!-- The Modal -->
+        <div id="myModal2" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close2">&times;</span>
+
+            <h5 class="center-align">
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Jack
+            </h5>
+            <h5 class="center-align">
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 8940 Mayfield Dr.
+              San Diego, CA 92126
+            </h5>
+            <h5 class="center-align">
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 562-250-8287
+              Landline, from Downey, CA(state),USA
+            </h5>
+
+
+          </div>
+
+        </div>
+
+
+      </li>
+      <li class="collection-item">
+        <a href="#">Jane</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">Jennifer</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">John</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">Jackson</a>
+      </li>
+
+      <li class="collection-header">
+        <h5>K</h5>
+      </li>
+      <li class="collection-item">
+        <a href="#">Kate</a>
+
+        <!-- Trigger/Open The Modal -->
+        <div align="right">
+
+          <button class="btn" id="myBtn3">Info</button>
+        </div>
+
+
+        <!-- The Modal -->
+        <div id="myModal3" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close3">&times;</span>
+
+            <h5 class="center-align">
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Kate
+            </h5>
+            <h5 class="center-align">
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 5 Circle Road
+              North Hills, CA 91343
+            </h5>
+            <h5 class="center-align">
+              &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;323-704-7134
+              Landline, from Los Angeles, CA(state),USA
+            </h5>
+
+
+          </div>
+
+        </div>
+
+
+      </li>
+      <li class="collection-item">
+        <a href="#">Kutcher</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">Katich</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">Kingston</a>
+      </li>
+      <li class="collection-item">
+        <a href="#">Khole</a>
+      </li>
+
+
+
+    </ul>
+  </div>
+
+  <script type="text/javascript">
+    // Get input element
+    let filterInput = document.getElementById('filterInput');
+    // Add event listner
+    filterInput.addEventListener('keyup', filterNames);
+
+    function filterNames() {
+      // Get value of input
+      let filteredValue = document.getElementById('filterInput').value.toUpperCase();
+
+
+      // Get names UL
+      let namesUL = document.getElementById('names');
+      // Now we want collection-items
+      let namesLI = namesUL.querySelectorAll('li.collection-item'); // gives array
+
+      // Loop through collection items LIs
+      for (let i = 0; i < namesLI.length; i++) {
+        let a = namesLI[i].getElementsByTagName('a')[0];
+        console.log(a);
+        // Matching search with contacts list
+        if (a.innerHTML.toUpperCase().indexOf(filteredValue) > -1) {
+          // CSS property to hide all that dont match
+          namesLI[i].style.display = '';
+        } else {
+          namesLI[i].style.display = 'none';
+        }
+      }
+    }
+
+
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+
+
+    // Get the modal
+    var modal1 = document.getElementById("myModal1");
+
+    // Get the button that opens the modal
+    var btn1 = document.getElementById("myBtn1");
+
+    // Get the <span> element that closes the modal
+    var span1 = document.getElementsByClassName("close1")[0];
+
+    // When the user clicks the button, open the modal
+    btn1.onclick = function() {
+      modal1.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span1.onclick = function() {
+      modal1.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal1) {
+        modal1.style.display = "none";
+      }
+    }
+
+
+
+
+    // Get the modal
+    var modal2 = document.getElementById("myModal2");
+
+    // Get the button that opens the modal
+    var btn2 = document.getElementById("myBtn2");
+
+    // Get the <span> element that closes the modal
+    var span2 = document.getElementsByClassName("close2")[0];
+
+    // When the user clicks the button, open the modal
+    btn2.onclick = function() {
+      modal2.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span2.onclick = function() {
+      modal2.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal2) {
+        modal2.style.display = "none";
+      }
+    }
+
+
+    // Get the modal
+    var modal3 = document.getElementById("myModal3");
+
+    // Get the button that opens the modal
+    var btn3 = document.getElementById("myBtn3");
+
+    // Get the <span> element that closes the modal
+    var span3 = document.getElementsByClassName("close3")[0];
+
+    // When the user clicks the button, open the modal
+    btn3.onclick = function() {
+      modal3.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span3.onclick = function() {
+      modal3.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal3) {
+        modal3.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
